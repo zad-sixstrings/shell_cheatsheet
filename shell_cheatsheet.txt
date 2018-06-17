@@ -160,3 +160,25 @@ Calculate permission digits by adding number below:
 4 | Read (r)
 2 | Write (w)
 1 | Execute (x)
+
+#DOWNLOAD
+wget "url"		 | Download web page
+wget -O <filename> <url> | Save as
+wget -m <url>		 | Mirror website
+wget -mpNHk <url>	 | Crawl website
+
+#COMRESSION
+tar -czvf archive_name.tar.gz <directory> | Compresses <directory>
+
+-c | Create an archive
+-x | Extract an archive
+-z | Compress with gzip
+-v | Stdout progress ('verbose' mode)
+-f | Allows specifying filename of the archive
+
+tar -czvf archive.tar.gz <dir> <dir> <dir> | Compresses all <dir>
+tar -czvf a.tar.gz <dir> --exclude=<dir>   | Exclude directories
+tar -czvf a.tar.gz <dir> --exclude=*.png   | Exclude all png files
+
+tar -xzvf archive.tar.gz                | Extract archive
+tar -xzvf archive.tar.gz -C <directory> | Extract to <directory>
